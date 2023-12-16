@@ -1,0 +1,146 @@
+@import url(./partials/_variables.css);
+
+/* Root */
+.rootContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+/*  Poste Block  */
+.voteContainer{
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color:#f5f1f1;
+}
+
+/* Poste Name */
+.posteTitle{
+  border-radius: 10px 10px 0 0;
+  padding: 5px;
+  margin-bottom : 10px;
+  background-color:var(--primary-color);
+  color:white;
+}
+
+/* Center card of candidates */
+.rowCard{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Three columns side by side */
+.columnCard {
+    float: left;
+    margin-bottom: 16px;
+    width: 25%;
+    border-radius: 10px 10px 0 0;
+    padding: 0 8px;
+    min-width: 260px;
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /*display: flex;*/
+  }
+  
+  .card img{
+    width:100%; /*width:50%;*/
+    border-radius: 10px 10px 0 0;
+  }
+
+  /* Some left and right padding inside the container */
+  .containerCard {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .containerCard::after, .rowCard::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.containerCard .nameCard{
+  font-size:17px;
+}
+
+.containerCard .levelCard {
+    color: grey;
+  }
+
+.voteCheck{
+    border: none;
+    outline: 0;
+    display:flex;
+    padding: 8px;
+    color: white;
+    background-color: var(--primary-color);
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    transition: 300ms ease-out;
+}
+
+.voteCheck .vote_text{
+    margin: 4px;
+}
+
+.voteCheck:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width:780px){
+  .card {
+    display: flex;    
+    transition: 300ms ease-out;
+  }
+  
+  .card img{
+    width:50%;
+  }
+
+  .voteContainer{
+    width: 90%;
+  }
+
+  .columnCard{
+    width:80%;
+  }
+
+  .rowCard{
+    flex-direction: column;
+  }
+
+  .containerCard{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .voteCheck{
+    border-radius: 10px;
+    transition: 300ms ease-out;
+  }
+
+  .posteTitle{
+    width:100%;
+  }
+
+  .voteContainer{
+    border-color:var(--primary-color);
+    border-width: 2px 0 2px 0;
+    border-style: solid;
+  }
+
+}

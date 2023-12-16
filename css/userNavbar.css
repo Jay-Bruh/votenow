@@ -1,0 +1,82 @@
+@import url(./partials/_variables.css);
+
+.userNavbar{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 10px;
+}
+
+.title a{
+    display: flex;
+    align-items: center;
+}
+
+.title a:hover{
+    color:var(--primary-color);
+    text-decoration: solid;
+}
+
+.navbarImg{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.userNavbar img{
+    width:50px;
+    margin-top:-10px;
+}
+
+.titleName{
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.user{
+    text-align: right;
+}
+
+.username{
+    margin-top: 4px;
+    font-size: 22px;
+    color:var(--primary-color);
+}
+
+@media screen and (max-width:780px){
+    .username{
+        font-size: 16px;
+    }
+    .titleName{
+        font-size:16px;
+    }
+}
+
+@media screen and (max-width:460px){
+    .username{
+        font-size: 14px;
+    }
+    .titleName{
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width:397px){
+    .user{
+        display: none;
+    }
+
+    .title{
+        display: none;
+    }
+
+    .navbarImg{
+        text-align: center;
+        width: 40px;
+    }
+}
